@@ -10,8 +10,10 @@ import gzip
 import json
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
-path="C:\\Users\\prash\\Downloads\\reviews_Office_Products_5.json.gz"
+filename="reviews_Office_Products_5.json.gz"
+path=os.path.join(os.getcwd(), filename)
 
 def parse(path):
   g = gzip.open(path, 'rb')
